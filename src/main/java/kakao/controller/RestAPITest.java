@@ -34,14 +34,14 @@ import org.springframework.web.client.RestTemplate;
  
  */
   @RestController
-  public class RestAPI_Test {
+  public class RestAPITest {
   
   
   @GetMapping("/test")
   public String calAPI() {
   
 	  String jsonInString = "";
-	  String a = "";
+	
 	  try { 
 		  HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory(); 
 		  factory.setConnectTimeout(5000);//타임아웃 설정 5초 

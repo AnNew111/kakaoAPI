@@ -1,12 +1,13 @@
 package kakao.controller;
 
-import java.awt.List;
+
 import java.net.URI;
 
-
 import org.json.simple.JSONObject;
-import org.junit.rules.ExpectedException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -21,9 +22,9 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import kakao.KakaoApiSettng;
@@ -39,15 +40,16 @@ import kakao.vo.TemplateVO;
 
 @RestController
 @RequestMapping(value="/kakaoapi")
-public class Kakao_Test {
+public class KakaoTest {
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	KakaoApiSettng kakaoApiSetting;
 	
 	@Autowired
-	private KakaoConfig kakaoCofig;
+	@Qualifier("kakaoConfig")
+	private KakaoConfig kakaoConfig;
 	
-	String clientId = kakaoCofig.getClient_id();
 //	public void setKakaoConfig(KakaoConfig kakaoCofig) {
 //		this.kakaoCofig = kakaoCofig;
 //	}
@@ -57,7 +59,8 @@ public class Kakao_Test {
 	@PostMapping(value = "/kakaoSendMsg")
 	public String  kakaotalkSend(@RequestBody SendMsgVO sendVO) {
 		String jsonInString = "";
-		String sendMsgUri = kakaoCofig.getSendMsgUri();
+		String sendMsgUri = kakaoConfig.getSendMsgUri();
+		String clientId = kakaoConfig.getClientId();
 		try { 
 			  ObjectMapper mapper = new ObjectMapper();
 			  mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -80,27 +83,23 @@ public class Kakao_Test {
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  
 			  jsonInString = jsonObj.toString();
-			  System.out.println("cmid="+jsonObj.get("cmid")); 
+			  logger.info("cmid="+jsonObj.get("cmid")); 
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  System.out.println("ㅠㅠ");
-			  System.out.println(e.toString()); 
+			  logger.info("ㅠㅠ");
+			  logger.info(e.toString()); 
 		  }catch(Exception e) {
-			  System.out.println(e.toString()); 
+			  logger.info(e.toString()); 
 		  }  
 		return jsonInString;	
 	}
-
-
-
-	
-	
 	//리포트 조회
 	@PostMapping(value = "/report")
 	public String reportSearch(@RequestBody ReportVO reportVO) {
-		System.out.println(reportVO.getCmid());
+		logger.info(reportVO.getCmid());
 		String cmid = reportVO.getCmid();
 		String jsonInString = "";
-		String reportUri = kakaoCofig.getReportUri();
+		String reportUri = kakaoConfig.getReportUri();
+		String clientId = kakaoConfig.getClientId();
 		try { 
 			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
@@ -110,7 +109,6 @@ public class Kakao_Test {
 			  //RequestBody로 데이터를 전달하는 HTTP.POST의 경우 VO 그대로 데이터 전달 가능
 			  HttpEntity<?> entity = new HttpEntity<>(header);
 			  
-			 
 			  //create(String) : URI 객체 생성함
 			  URI uri = URI.create(reportUri+"/"+clientId+"?"+"cmid="+cmid);
 			  
@@ -120,10 +118,10 @@ public class Kakao_Test {
 			  jsonInString = jsonObj.toString();
 			  
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  System.out.println("ㅠㅠ");
-			  System.out.println(e.toString()); 
+			  logger.info("ㅠㅠ");
+			  logger.info(e.toString()); 
 		  }catch(Exception e) {
-			  System.out.println(e.toString()); 
+			  logger.info(e.toString()); 
 		  }
 		return jsonInString;
 	}
@@ -131,11 +129,12 @@ public class Kakao_Test {
 	//템플릿 조회
 	@PostMapping(value="/template")
 	public String templateSearch(@RequestBody TemplateVO templateVO) {
-		System.out.println(templateVO.getTempateCode());
+		logger.info(templateVO.getTempateCode());
 		String template_code = templateVO.getTempateCode();
 		String status = templateVO.getStatus();
 		String jsonInString = "";
-		String templateUri = kakaoCofig.getTemplateUri();
+		String templateUri = kakaoConfig.getTemplateUri();
+		String clientId = kakaoConfig.getClientId();
 		try { 
 		      RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
@@ -153,10 +152,10 @@ public class Kakao_Test {
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  jsonInString = jsonObj.toString(); 
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  System.out.println("ㅠㅠ");
-			  System.out.println(e.toString()); 
+			  logger.info("ㅠㅠ");
+			  logger.info(e.toString()); 
 		  }catch(Exception e) {
-			  System.out.println(e.toString()); 
+			  logger.info(e.toString()); 
 		  }
 		return jsonInString;
 	}
@@ -165,9 +164,10 @@ public class Kakao_Test {
 	//발신번호 인증/등록
 	@PostMapping(value="/authentication")
 	public String phoneNumberAuthenticate(@RequestBody AuthenticationVO authenticationVO) {
-		System.out.println(authenticationVO.getComment());
-		String sendNumberSaveUri = kakaoCofig.getSendNumberSaveUri();
+		logger.info(authenticationVO.getComment());
+		String sendNumberSaveUri = kakaoConfig.getSendNumberSaveUri();
 		String jsonInString = "";
+		String clientId = kakaoConfig.getClientId();
 		try { 
 			  ObjectMapper mapper = new ObjectMapper();
 			  mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -189,10 +189,10 @@ public class Kakao_Test {
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  jsonInString = jsonObj.toString(); 
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  System.out.println("ㅠㅠ");
-			  System.out.println(e.toString()); 
+			  logger.info("ㅠㅠ");
+			  logger.info(e.toString()); 
 		  }catch(Exception e) {
-			  System.out.println(e.toString()); 
+			  logger.info(e.toString()); 
 		  }
 		return jsonInString;
 	}
@@ -200,10 +200,11 @@ public class Kakao_Test {
 	//발신번호 리스트 조회
 	@PostMapping(value = "/calling-number")
 	public String callingNumberSearch(@RequestBody CallingNumberVO callingNumberVO) {
-		System.out.println(callingNumberVO.getSendNumber());
+		logger.info(callingNumberVO.getSendNumber());
 		String sendnumber = callingNumberVO.getSendNumber();
 		String jsonInString = "";
-		String sendNumberListUri = kakaoCofig.getSendNumberListUri();
+		String sendNumberListUri = kakaoConfig.getSendNumberListUri();
+		String clientId = kakaoConfig.getClientId();
 		try { 
 			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
@@ -220,17 +221,18 @@ public class Kakao_Test {
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  jsonInString = jsonObj.toString();   
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  System.out.println("ㅠㅠ");
-			  System.out.println(e.toString()); 
+			  logger.info("ㅠㅠ");
+			  logger.info(e.toString()); 
 		  }catch(Exception e) {
-			  System.out.println(e.toString()); 
+			  logger.info(e.toString()); 
 		  }
 		return jsonInString;
 	}
 	
 	@GetMapping(value = "/test3")
 	public String test3() {
-		String conToString = kakaoCofig.toString();	
+		String conToString = kakaoConfig.toString();
+		logger.info("제발");
 		return conToString;
 	}
 	
