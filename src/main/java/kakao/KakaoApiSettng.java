@@ -5,6 +5,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,10 @@ import kakao.vo.SendMsgVO;
 @Component
 public class KakaoApiSettng {
 	
+	@Autowired
+	private KakaoConfig kakaoCofig;
+	
+	
 	public RestTemplate restTemplateSet() {
 		HttpClient httpClient = HttpClients.custom().setMaxConnTotal(120).setMaxConnPerRoute(60).build(); 
 		HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory(httpClient); 
@@ -33,7 +38,9 @@ public class KakaoApiSettng {
 
 	public HttpHeaders headerSet() {
 		HttpHeaders header = new HttpHeaders(); 
-		header.set("x-waple-authorization","MS0xMzY1NjY2MTAyDk0LTA2MWE4ZDgyLTZhZmMtNGU5OS05YThkLTgyNmFmYzVlOTkzZ Q==");
+		String key = kakaoCofig.getKey();
+		String value = kakaoCofig.getValue();
+		header.set(key,value);
 		header.setContentType(MediaType.APPLICATION_JSON);
 		return header;
 	}

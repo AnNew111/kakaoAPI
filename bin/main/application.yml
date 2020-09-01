@@ -1,0 +1,11 @@
+spring:
+  header:
+    key: x-waple-authorization
+    value: MS0xMzY1NjY2MTAyDk0LTA2MWE4ZDgyLTZhZmMtNGU5OS05YThkLTgyNmFmYzVlOTkzZ Q==
+  uri:
+    sendMsgUri: http://api.apistore.co.kr/kko/1/msg
+    reportUri: http://api.apistore.co.kr/kko/1/report
+    templateUri: http://api.apistore.co.kr/kko/1/template/list
+    sendNumberSaveUri: http://api.apistore.co.kr/kko/2/sendnumber/save
+    sendNumberListUri: http://api.apistore.co.kr/kko/1/sendnumber/list
+    client_id: devteam

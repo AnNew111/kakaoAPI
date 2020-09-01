@@ -1,5 +1,6 @@
 package kakao.controller;
 
+import java.awt.List;
 import java.net.URI;
 
 
@@ -11,8 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 
 import org.springframework.http.ResponseEntity;
-
-
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +27,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import kakao.KakaoApiSettng;
+import kakao.KakaoConfig;
 import kakao.vo.AuthenticationVO;
 import kakao.vo.CallingNumberVO;
 import kakao.vo.KakaoAuthenticationVO;
@@ -43,11 +44,20 @@ public class Kakao_Test {
 	@Autowired
 	KakaoApiSettng kakaoApiSetting;
 	
+	@Autowired
+	private KakaoConfig kakaoCofig;
+	
+	String clientId = kakaoCofig.getClient_id();
+//	public void setKakaoConfig(KakaoConfig kakaoCofig) {
+//		this.kakaoCofig = kakaoCofig;
+//	}
+	
+	
 	//카카오 알림톡 전송
 	@PostMapping(value = "/kakaoSendMsg")
 	public String  kakaotalkSend(@RequestBody SendMsgVO sendVO) {
 		String jsonInString = "";
-	
+		String sendMsgUri = kakaoCofig.getSendMsgUri();
 		try { 
 			  ObjectMapper mapper = new ObjectMapper();
 			  mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -63,7 +73,7 @@ public class Kakao_Test {
 			  HttpEntity<KakaoSendMsgVO> entity = new HttpEntity<>(kakaoSendMsgVO,header);
 			  
 			  //create(String) : URI 객체 생성함
-			  URI url = URI.create("http://api.apistore.co.kr/kko/1/msg/{client_id}");
+			  URI url = URI.create(sendMsgUri+"/"+clientId);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 			  
@@ -90,6 +100,7 @@ public class Kakao_Test {
 		System.out.println(reportVO.getCmid());
 		String cmid = reportVO.getCmid();
 		String jsonInString = "";
+		String reportUri = kakaoCofig.getReportUri();
 		try { 
 			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
@@ -99,9 +110,9 @@ public class Kakao_Test {
 			  //RequestBody로 데이터를 전달하는 HTTP.POST의 경우 VO 그대로 데이터 전달 가능
 			  HttpEntity<?> entity = new HttpEntity<>(header);
 			  
-			  String url = "http://api.apistore.co.kr/kko/1/report/{client_id}" ;
+			 
 			  //create(String) : URI 객체 생성함
-			  URI uri = URI.create(url+"?"+"cmid="+cmid);
+			  URI uri = URI.create(reportUri+"/"+clientId+"?"+"cmid="+cmid);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 			  
@@ -124,6 +135,7 @@ public class Kakao_Test {
 		String template_code = templateVO.getTempateCode();
 		String status = templateVO.getStatus();
 		String jsonInString = "";
+		String templateUri = kakaoCofig.getTemplateUri();
 		try { 
 		      RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
@@ -133,9 +145,8 @@ public class Kakao_Test {
 			  //RequestBody로 데이터를 전달하는 HTTP.POST의 경우 VO 그대로 데이터 전달 가능
 			  HttpEntity<?> entity = new HttpEntity<>(header);
 			  
-			  String url = " http://api.apistore.co.kr/kko/1/template/list/{client_id}" ;
 			  //create(String) : URI 객체 생성함
-			  URI uri = URI.create(url+"?"+"template_code="+template_code+"&"+"status="+status);
+			  URI uri = URI.create(templateUri+"/"+clientId+"?"+"template_code="+template_code+"&"+"status="+status);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 			  
@@ -155,7 +166,7 @@ public class Kakao_Test {
 	@PostMapping(value="/authentication")
 	public String phoneNumberAuthenticate(@RequestBody AuthenticationVO authenticationVO) {
 		System.out.println(authenticationVO.getComment());
-		
+		String sendNumberSaveUri = kakaoCofig.getSendNumberSaveUri();
 		String jsonInString = "";
 		try { 
 			  ObjectMapper mapper = new ObjectMapper();
@@ -170,9 +181,8 @@ public class Kakao_Test {
 
 			  HttpEntity<KakaoAuthenticationVO> entity = new HttpEntity<>(kakaoAuthenticationVO,header);
 			  
-			  String url = "http://api.apistore.co.kr/kko/2/sendnumber/save/{client_id}";
 			  //create(String) : URI 객체 생성함
-			  URI uri = URI.create(url);
+			  URI uri = URI.create(sendNumberSaveUri+"/"+clientId);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.POST, entity, String.class);
 			  
@@ -193,6 +203,7 @@ public class Kakao_Test {
 		System.out.println(callingNumberVO.getSendNumber());
 		String sendnumber = callingNumberVO.getSendNumber();
 		String jsonInString = "";
+		String sendNumberListUri = kakaoCofig.getSendNumberListUri();
 		try { 
 			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
@@ -201,10 +212,8 @@ public class Kakao_Test {
 			  //HttpEntity는 Http프로토콜을 이용하는 통신의  header와 body관련 정보를 저장할 수 있게끔 함.
 			  HttpEntity<?> entity = new HttpEntity<>(header);
 			  
-			  String url = "http://api.apistore.co.kr/kko/1/sendnumber/list/{client_id}";
-			  
 			  //create(String) : URI 객체 생성함
-			  URI uri = URI.create(url+"?"+"sendnumber="+sendnumber);
+			  URI uri = URI.create(sendNumberListUri+"/"+clientId+"?"+"sendnumber="+sendnumber);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 			  
@@ -218,6 +227,13 @@ public class Kakao_Test {
 		  }
 		return jsonInString;
 	}
+	
+	@GetMapping(value = "/test3")
+	public String test3() {
+		String conToString = kakaoCofig.toString();	
+		return conToString;
+	}
+	
 	
 	
 	
