@@ -2,8 +2,11 @@ package kakao.controller;
 
 
 import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,13 +28,12 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
-
-import com.fasterxml.jackson.databind.DeserializationFeature;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 
 import kakao.KakaoApiSettng;
 import kakao.KakaoConfig;
+import kakao.KakaoReportCode;
 import kakao.vo.AuthenticationVO;
 import kakao.vo.CallingNumberVO;
 import kakao.vo.KakaoAuthenticationVO;
@@ -53,46 +58,53 @@ public class KakaoTest {
 //	public void setKakaoConfig(KakaoConfig kakaoCofig) {
 //		this.kakaoCofig = kakaoCofig;
 //	}
-	
-	
-	//Ä«Ä«¿À ¾Ë¸²Åå Àü¼Û
+
+	//ì¹´ì¹´ì˜¤ ì•Œë¦¼í†¡ ì „ì†¡
 	@PostMapping(value = "/kakaoSendMsg")
 	public String  kakaotalkSend(@RequestBody SendMsgVO sendVO) {
 		String jsonInString = "";
 		String sendMsgUri = kakaoConfig.getSendMsgUri();
 		String clientId = kakaoConfig.getClientId();
+		logger.info(sendVO.getMsg());
+		logger.info(sendVO.getCallBack());
+		logger.info("í…œí”Œë¦¿"+sendVO.getTemplateCode());
+
 		try { 
+			  Gson gson = new Gson();
+			  String mappedValue = gson.toJson(sendVO);
+			  logger.info("String mapper"+mappedValue);
+			  
+			  KakaoSendMsgVO kakaoSendMsgVO = gson.fromJson(mappedValue, KakaoSendMsgVO.class);
+
+			  logger.info("ì¹´ì¹´ì˜¤ ì „ì²´:"+kakaoSendMsgVO.toString());
+			  
 			  ObjectMapper mapper = new ObjectMapper();
-			  mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			  String objToJson = mapper.writeValueAsString(sendVO);
-			  KakaoSendMsgVO kakaoSendMsgVO = mapper.readValue(objToJson, KakaoSendMsgVO.class);
-			
+			  String jobj = mapper.writeValueAsString(kakaoSendMsgVO);
+			  Map<String,String> map = mapper.readValue(jobj, Map.class);
+			  
+			  MultiValueMap<String, String> result = new LinkedMultiValueMap<>();
+			  result.setAll(map);
+			  			  
 			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
-			  
 			  HttpHeaders header = kakaoApiSetting.headerSet();
-			  
-			  //HttpEntity´Â HttpÇÁ·ÎÅäÄİÀ» ÀÌ¿ëÇÏ´Â Åë½ÅÀÇ  header¿Í body°ü·Ã Á¤º¸¸¦ ÀúÀåÇÒ ¼ö ÀÖ°Ô²û ÇÔ.
-			  //RequestBody·Î µ¥ÀÌÅÍ¸¦ Àü´ŞÇÏ´Â HTTP.POSTÀÇ °æ¿ì VO ±×´ë·Î µ¥ÀÌÅÍ Àü´Ş °¡´É
-			  HttpEntity<KakaoSendMsgVO> entity = new HttpEntity<>(kakaoSendMsgVO,header);
-			  
-			  //create(String) : URI °´Ã¼ »ı¼ºÇÔ
-			  URI url = URI.create(sendMsgUri+"/"+clientId);
-			  
-			  ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
+			  HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(result,header);		  
+			  //create(String) : URI ê°ì²´ ìƒì„±í•¨
+			  URI url = URI.create(sendMsgUri+"/"+clientId);		  
+			 
+			  ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);			  
 			  
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  
 			  jsonInString = jsonObj.toString();
 			  logger.info("cmid="+jsonObj.get("cmid")); 
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  logger.info("¤Ğ¤Ğ");
 			  logger.info(e.toString()); 
 		  }catch(Exception e) {
 			  logger.info(e.toString()); 
 		  }  
 		return jsonInString;	
 	}
-	//¸®Æ÷Æ® Á¶È¸
+	//ë¦¬í¬íŠ¸ ì¡°íšŒ        
 	@PostMapping(value = "/report")
 	public String reportSearch(@RequestBody ReportVO reportVO) {
 		logger.info(reportVO.getCmid());
@@ -100,33 +112,47 @@ public class KakaoTest {
 		String jsonInString = "";
 		String reportUri = kakaoConfig.getReportUri();
 		String clientId = kakaoConfig.getClientId();
+		String r = "";
 		try { 
 			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
 			  HttpHeaders header = kakaoApiSetting.headerSet();
-			  
-			  //HttpEntity´Â HttpÇÁ·ÎÅäÄİÀ» ÀÌ¿ëÇÏ´Â Åë½ÅÀÇ  header¿Í body°ü·Ã Á¤º¸¸¦ ÀúÀåÇÒ ¼ö ÀÖ°Ô²û ÇÔ.
-			  //RequestBody·Î µ¥ÀÌÅÍ¸¦ Àü´ŞÇÏ´Â HTTP.POSTÀÇ °æ¿ì VO ±×´ë·Î µ¥ÀÌÅÍ Àü´Ş °¡´É
+
+			  //HttpEntityëŠ” Httpí”„ë¡œí† ì½œì„ ì´ìš©í•˜ëŠ” í†µì‹ ì˜  headerì™€ bodyê´€ë ¨ ì •ë³´ë¥¼ ì €ì¥í•  ìˆ˜ ìˆê²Œë” í•¨.
+			  //RequestBodyë¡œ ë°ì´í„°ë¥¼ ì „ë‹¬í•˜ëŠ” HTTP.POSTì˜ ê²½ìš° VO ê·¸ëŒ€ë¡œ ë°ì´í„° ì „ë‹¬ ê°€ëŠ¥
 			  HttpEntity<?> entity = new HttpEntity<>(header);
 			  
-			  //create(String) : URI °´Ã¼ »ı¼ºÇÔ
+			  //create(String) :URI ê°ì²´ ìƒì„±í•¨
 			  URI uri = URI.create(reportUri+"/"+clientId+"?"+"cmid="+cmid);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 			  
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
-			  jsonInString = jsonObj.toString();
+
+			  String rslt = jsonObj.get("RSLT").toString();
+			  logger.info(rslt);
+			  String description = "";
+			  for(KakaoReportCode code : KakaoReportCode.values()) {
+				  if(code.getValue().toString().equals(rslt)) {
+					  description = code.toString();
+				  }break;
+			  }
+			  logger.info(description);
+			  jsonObj.remove("RSLT");
+			  jsonObj.put("RSLT",description);
 			  
+			  jsonInString = jsonObj.toString();
+			  r = response.toString();
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  logger.info("¤Ğ¤Ğ");
 			  logger.info(e.toString()); 
 		  }catch(Exception e) {
 			  logger.info(e.toString()); 
 		  }
+		
 		return jsonInString;
 	}
 	
-	//ÅÛÇÃ¸´ Á¶È¸
+	//í…œí”Œë¦¿ ì¡°íšŒ
 	@PostMapping(value="/template")
 	public String templateSearch(@RequestBody TemplateVO templateVO) {
 		logger.info(templateVO.getTempateCode());
@@ -135,24 +161,26 @@ public class KakaoTest {
 		String jsonInString = "";
 		String templateUri = kakaoConfig.getTemplateUri();
 		String clientId = kakaoConfig.getClientId();
+		String a = "";
 		try { 
 		      RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
 			  HttpHeaders header = kakaoApiSetting.headerSet();
-			  
-			  //HttpEntity´Â HttpÇÁ·ÎÅäÄİÀ» ÀÌ¿ëÇÏ´Â Åë½ÅÀÇ  header¿Í body°ü·Ã Á¤º¸¸¦ ÀúÀåÇÒ ¼ö ÀÖ°Ô²û ÇÔ.
-			  //RequestBody·Î µ¥ÀÌÅÍ¸¦ Àü´ŞÇÏ´Â HTTP.POSTÀÇ °æ¿ì VO ±×´ë·Î µ¥ÀÌÅÍ Àü´Ş °¡´É
+
+			  //HttpEntityëŠ” Httpí”„ë¡œí† ì½œì„ ì´ìš©í•˜ëŠ” í†µì‹ ì˜  headerì™€ bodyê´€ë ¨ ì •ë³´ë¥¼ ì €ì¥í•  ìˆ˜ ìˆê²Œë” í•¨.
+			  //RequestBodyë¡œ ë°ì´í„°ë¥¼ ì „ë‹¬í•˜ëŠ” HTTP.POSTì˜ ê²½ìš° VO ê·¸ëŒ€ë¡œ ë°ì´í„° ì „ë‹¬ ê°€ëŠ¥
 			  HttpEntity<?> entity = new HttpEntity<>(header);
 			  
-			  //create(String) : URI °´Ã¼ »ı¼ºÇÔ
+			  //create(String) : URI ê°ì²´ ìƒì„±í•¨
 			  URI uri = URI.create(templateUri+"/"+clientId+"?"+"template_code="+template_code+"&"+"status="+status);
-			  
+			  logger.info(uri.toString());
+			    
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-			  
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  jsonInString = jsonObj.toString(); 
+			  a = response.getBody().toString();
+			  logger.info(a);
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  logger.info("¤Ğ¤Ğ");
 			  logger.info(e.toString()); 
 		  }catch(Exception e) {
 			  logger.info(e.toString()); 
@@ -161,27 +189,35 @@ public class KakaoTest {
 	}
 	
 
-	//¹ß½Å¹øÈ£ ÀÎÁõ/µî·Ï
+	//ë°œì‹ ë²ˆí˜¸ ì¸ì¦/ë“±ë¡
 	@PostMapping(value="/authentication")
 	public String phoneNumberAuthenticate(@RequestBody AuthenticationVO authenticationVO) {
 		logger.info(authenticationVO.getComment());
 		String sendNumberSaveUri = kakaoConfig.getSendNumberSaveUri();
 		String jsonInString = "";
 		String clientId = kakaoConfig.getClientId();
+		logger.info(authenticationVO.getSendNumber());
 		try { 
+			 Gson gson = new Gson();
+			  String mappedValue = gson.toJson(authenticationVO);
+			  logger.info("String mapper"+mappedValue);
+			  
+			  KakaoAuthenticationVO kakaoAuthenticationVO = gson.fromJson(mappedValue, KakaoAuthenticationVO.class);
+			  logger.info("ì¹´ì¹´ì˜¤ ì „ì²´:"+kakaoAuthenticationVO.toString());
+			  
 			  ObjectMapper mapper = new ObjectMapper();
-			  mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			  String objToJson = mapper.writeValueAsString(authenticationVO);
-			  KakaoAuthenticationVO kakaoAuthenticationVO = mapper.readValue(objToJson, KakaoAuthenticationVO.class);
+			  String jobj = mapper.writeValueAsString(kakaoAuthenticationVO);
+			  Map<String,String> map = mapper.readValue(jobj, Map.class);
+			  
 			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
 			  HttpHeaders header = kakaoApiSetting.headerSet();
 			    
-			  //HttpEntity´Â HttpÇÁ·ÎÅäÄİÀ» ÀÌ¿ëÇÏ´Â Åë½ÅÀÇ  header¿Í body°ü·Ã Á¤º¸¸¦ ÀúÀåÇÒ ¼ö ÀÖ°Ô²û ÇÔ.
+			  //HttpEntityëŠ” Httpí”„ë¡œí† ì½œì„ ì´ìš©í•˜ëŠ” í†µì‹ ì˜  headerì™€ bodyê´€ë ¨ ì •ë³´ë¥¼ ì €ì¥í•  ìˆ˜ ìˆê²Œë” í•¨.
 
 			  HttpEntity<KakaoAuthenticationVO> entity = new HttpEntity<>(kakaoAuthenticationVO,header);
 			  
-			  //create(String) : URI °´Ã¼ »ı¼ºÇÔ
+			  //create(String) : URI ê°ì²´ ìƒì„±í•¨
 			  URI uri = URI.create(sendNumberSaveUri+"/"+clientId);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.POST, entity, String.class);
@@ -189,7 +225,6 @@ public class KakaoTest {
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  jsonInString = jsonObj.toString(); 
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  logger.info("¤Ğ¤Ğ");
 			  logger.info(e.toString()); 
 		  }catch(Exception e) {
 			  logger.info(e.toString()); 
@@ -197,7 +232,7 @@ public class KakaoTest {
 		return jsonInString;
 	}
 	
-	//¹ß½Å¹øÈ£ ¸®½ºÆ® Á¶È¸
+	//ë°œì‹ ë²ˆí˜¸ ë¦¬ìŠ¤íŠ¸ ì¡°íšŒ
 	@PostMapping(value = "/calling-number")
 	public String callingNumberSearch(@RequestBody CallingNumberVO callingNumberVO) {
 		logger.info(callingNumberVO.getSendNumber());
@@ -210,10 +245,10 @@ public class KakaoTest {
 			  
 			  HttpHeaders header = kakaoApiSetting.headerSet();
 			  
-			  //HttpEntity´Â HttpÇÁ·ÎÅäÄİÀ» ÀÌ¿ëÇÏ´Â Åë½ÅÀÇ  header¿Í body°ü·Ã Á¤º¸¸¦ ÀúÀåÇÒ ¼ö ÀÖ°Ô²û ÇÔ.
+			  //HttpEntityëŠ” Httpí”„ë¡œí† ì½œì„ ì´ìš©í•˜ëŠ” í†µì‹ ì˜  headerì™€ bodyê´€ë ¨ ì •ë³´ë¥¼ ì €ì¥í•  ìˆ˜ ìˆê²Œë” í•¨.
 			  HttpEntity<?> entity = new HttpEntity<>(header);
 			  
-			  //create(String) : URI °´Ã¼ »ı¼ºÇÔ
+			  //create(String) : URI ê°ì²´ ìƒì„±í•¨
 			  URI uri = URI.create(sendNumberListUri+"/"+clientId+"?"+"sendnumber="+sendnumber);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
@@ -221,7 +256,6 @@ public class KakaoTest {
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  jsonInString = jsonObj.toString();   
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  logger.info("¤Ğ¤Ğ");
 			  logger.info(e.toString()); 
 		  }catch(Exception e) {
 			  logger.info(e.toString()); 
@@ -232,7 +266,7 @@ public class KakaoTest {
 	@GetMapping(value = "/test3")
 	public String test3() {
 		String conToString = kakaoConfig.toString();
-		logger.info("Á¦¹ß");
+		logger.info("test");
 		return conToString;
 	}
 	

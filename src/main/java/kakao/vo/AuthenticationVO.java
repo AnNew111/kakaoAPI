@@ -7,13 +7,16 @@ import lombok.Data;
 @Data
 public class AuthenticationVO{
 
-	@JsonProperty("sendnember")
+
 	private String sendNumber;
 	
 	private String comment;
 	
 	@JsonProperty("pintype")
 	private String pinType;
+	
+	@JsonProperty("pincode")
+	private String pinCode;
 
 	
 }

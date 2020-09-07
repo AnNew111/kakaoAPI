@@ -1,0 +1,899 @@
+2020:09:04 00:00:55.912 INFO  --- [RMI TCP Connection(8)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 00:00:56.315 INFO  --- [RMI TCP Connection(8)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 00:01:01.383 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 15864 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 00:01:01.387 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 00:01:02.136 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 00:01:02.144 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 00:01:02.145 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 00:01:02.146 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 00:01:02.227 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 00:01:02.227 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 799 ms 
+2020:09:04 00:01:02.391 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 00:01:02.598 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 00:01:02.614 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 00:01:02.623 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 1.693 seconds (JVM running for 2.788) 
+2020:09:04 00:01:11.070 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 00:01:11.071 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 00:01:11.074 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 3 ms 
+2020:09:04 00:01:11.142 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 00:01:11.159 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "faled_msg" (class kakao.vo.KakaoSendMsgVO), not marked as ignorable (9 known properties: "msg", "template_code", "callback", "btn_types", "faled_type", "btn_urls1", "btn_urls2", "phone", "btn_txts"])
+ at [Source: (String)"{"phone":"01040392705","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","callback":null,"template_code":null,"faled_type":null,"faled_msg":null,"btn_types":null,"btn_txts":null,"btn_urls1":null,"btn_urls2":null}"; line: 1, column: 141] (through reference chain: kakao.vo.KakaoSendMsgVO["faled_msg"]) 
+2020:09:04 00:03:13.798 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 00:03:14.177 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 00:03:17.944 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 10644 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 00:03:17.946 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 00:03:18.710 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 00:03:18.719 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 00:03:18.720 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 00:03:18.720 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 00:03:18.810 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 00:03:18.810 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 825 ms 
+2020:09:04 00:03:19.021 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 00:03:19.205 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 00:03:19.222 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 00:03:19.232 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 1.741 seconds (JVM running for 2.689) 
+2020:09:04 00:03:30.756 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 00:03:30.757 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 00:03:30.762 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 5 ms 
+2020:09:04 00:03:30.859 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 00:03:30.880 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 00:03:30.880 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : null 
+2020:09:04 00:03:31.611 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 00:03:31.622 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : org.springframework.web.client.RestClientException: No HttpMessageConverter for kakao.vo.KakaoSendMsgVO and content type "application/x-www-form-urlencoded;charset=UTF-8" 
+2020:09:04 00:04:51.906 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 00:04:52.291 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 00:04:55.128 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 15116 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 00:04:55.130 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 00:04:55.855 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 00:04:55.861 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 00:04:55.862 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 00:04:55.863 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 00:04:55.939 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 00:04:55.940 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 773 ms 
+2020:09:04 00:04:56.106 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 00:04:56.270 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 00:04:56.287 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 00:04:56.294 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 1.586 seconds (JVM running for 2.528) 
+2020:09:04 00:05:11.113 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 00:05:11.114 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 00:05:11.118 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 4 ms 
+2020:09:04 00:05:11.192 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 00:05:11.192 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : null 
+2020:09:04 00:05:11.207 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 00:05:11.207 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : null 
+2020:09:04 00:05:11.954 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 00:05:11.964 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : org.springframework.web.client.RestClientException: No HttpMessageConverter for kakao.vo.KakaoSendMsgVO and content type "application/x-www-form-urlencoded;charset=UTF-8" 
+2020:09:04 00:06:06.774 INFO  --- [RMI TCP Connection(3)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 00:06:07.159 INFO  --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 00:06:11.827 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 2332 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 00:06:11.830 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 00:06:12.577 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 00:06:12.584 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 00:06:12.585 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 00:06:12.585 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 00:06:12.665 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 00:06:12.665 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 792 ms 
+2020:09:04 00:06:12.827 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 00:06:12.991 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 00:06:13.010 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 00:06:13.019 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 1.67 seconds (JVM running for 2.62) 
+2020:09:04 00:06:20.593 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 00:06:20.593 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 00:06:20.597 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 4 ms 
+2020:09:04 00:06:20.667 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 00:06:20.668 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 00:06:20.690 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "callBack" (class kakao.vo.KakaoSendMsgVO), not marked as ignorable (9 known properties: "msg", "template_code", "callback", "btn_types", "faled_type", "btn_urls1", "btn_urls2", "phone", "btn_txts"])
+ at [Source: (String)"{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","template_code":null,"faled_type":null,"btn_types":null,"btn_txts":null,"btn_urls1":null,"btn_urls2":null}"; line: 1, column: 36] (through reference chain: kakao.vo.KakaoSendMsgVO["callBack"]) 
+2020:09:04 01:32:32.856 INFO  --- [RMI TCP Connection(78)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 01:32:33.241 INFO  --- [RMI TCP Connection(78)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 01:32:36.632 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 17784 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 01:32:36.634 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 01:32:37.380 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 01:32:37.388 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 01:32:37.389 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 01:32:37.389 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 01:32:37.474 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 01:32:37.474 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 801 ms 
+2020:09:04 01:32:37.637 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 01:32:37.804 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 01:32:37.820 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 01:32:37.829 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 1.644 seconds (JVM running for 2.612) 
+2020:09:04 01:32:50.300 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 01:32:50.301 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 01:32:50.306 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 5 ms 
+2020:09:04 01:32:50.379 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 01:32:50.380 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 01:32:50.396 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "callBack" (class kakao.vo.KakaoSendMsgVO), not marked as ignorable (9 known properties: "msg", "template_code", "callback", "btn_types", "faled_type", "btn_urls1", "btn_urls2", "phone", "btn_txts"])
+ at [Source: (String)"{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","template_code":null,"faled_type":null,"btn_types":null,"btn_txts":null,"btn_urls1":null,"btn_urls2":null}"; line: 1, column: 36] (through reference chain: kakao.vo.KakaoSendMsgVO["callBack"]) 
+2020:09:04 02:00:12.978 INFO  --- [RMI TCP Connection(32)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 02:00:13.426 INFO  --- [RMI TCP Connection(32)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:09:43.686 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 876 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:09:43.694 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:09:45.742 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:09:45.761 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:09:45.763 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:09:45.764 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:09:46.011 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:09:46.012 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2223 ms 
+2020:09:04 10:09:46.509 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:09:46.962 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:09:47.022 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:09:47.049 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.762 seconds (JVM running for 7.712) 
+2020:09:04 10:10:05.307 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 10:10:05.308 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 10:10:05.323 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 14 ms 
+2020:09:04 10:10:05.567 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 10:10:05.569 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 10:10:05.718 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "callBack" (class kakao.vo.KakaoSendMsgVO), not marked as ignorable (9 known properties: "msg", "template_code", "callback", "btn_types", "faled_type", "btn_urls1", "btn_urls2", "phone", "btn_txts"])
+ at [Source: (String)"{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","template_code":null,"faled_type":null,"btn_types":null,"btn_txts":null,"btn_urls1":null,"btn_urls2":null}"; line: 1, column: 36] (through reference chain: kakao.vo.KakaoSendMsgVO["callBack"]) 
+2020:09:04 10:13:17.273 INFO  --- [RMI TCP Connection(8)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 10:13:18.753 INFO  --- [RMI TCP Connection(8)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:13:24.982 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 15596 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:13:24.990 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:13:28.185 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:13:28.208 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:13:28.211 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:13:28.212 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:13:28.502 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:13:28.503 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3387 ms 
+2020:09:04 10:13:29.046 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:13:29.863 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:13:29.956 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:13:30.005 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 6.678 seconds (JVM running for 10.289) 
+2020:09:04 10:16:16.514 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 10:16:18.449 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:19:32.577 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 9584 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:19:32.582 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:19:35.295 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:19:35.312 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:19:35.314 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:19:35.315 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:19:35.527 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:19:35.527 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2864 ms 
+2020:09:04 10:19:36.060 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:19:36.648 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:19:36.721 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:19:36.752 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 5.988 seconds (JVM running for 9.487) 
+2020:09:04 10:19:58.532 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 10:19:58.534 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 10:19:58.546 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 12 ms 
+2020:09:04 10:19:58.739 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 10:19:58.740 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 10:19:58.740 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : KTEST2 
+2020:09:04 10:19:58.787 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "callBack" (class kakao.vo.KakaoSendMsgVO), not marked as ignorable (9 known properties: "msg", "template_code", "callback", "btn_types", "faled_type", "btn_urls1", "btn_urls2", "phone", "btn_txts"])
+ at [Source: (String)"{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":"","btnUrls2":""}"; line: 1, column: 36] (through reference chain: kakao.vo.KakaoSendMsgVO["callBack"]) 
+2020:09:04 10:23:36.583 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 10:23:37.455 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:27:29.923 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 9244 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:27:29.928 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:27:31.438 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:27:31.454 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:27:31.456 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:27:31.457 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:27:31.641 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:27:31.642 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1636 ms 
+2020:09:04 10:27:31.958 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:27:32.289 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:27:32.324 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:27:32.340 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.259 seconds (JVM running for 5.317) 
+2020:09:04 10:27:37.036 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 10:27:37.037 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 10:27:37.046 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 8 ms 
+2020:09:04 10:27:37.190 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 10:27:37.192 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 10:27:37.192 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 10:27:37.232 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "callBack" (class kakao.vo.KakaoSendMsgVO), not marked as ignorable (9 known properties: "msg", "template_code", "callback", "btn_types", "faled_type", "btn_urls1", "btn_urls2", "phone", "btn_txts"])
+ at [Source: (String)"{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":"","btnUrls2":""}"; line: 1, column: 36] (through reference chain: kakao.vo.KakaoSendMsgVO["callBack"]) 
+2020:09:04 10:41:18.139 INFO  --- [RMI TCP Connection(17)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 10:41:18.851 INFO  --- [RMI TCP Connection(17)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:41:36.515 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 5604 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:41:36.520 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:41:38.162 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:41:38.174 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:41:38.175 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:41:38.176 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:41:38.364 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:41:38.364 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1774 ms 
+2020:09:04 10:41:38.709 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:41:39.032 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:41:39.058 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:41:39.073 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.472 seconds (JVM running for 5.888) 
+2020:09:04 10:41:48.183 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 10:41:48.184 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 10:41:48.191 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 7 ms 
+2020:09:04 10:41:48.339 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 10:41:48.340 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 10:41:48.340 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 10:41:48.362 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $ 
+2020:09:04 10:42:43.891 INFO  --- [RMI TCP Connection(3)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 10:42:44.732 INFO  --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:42:49.846 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 9940 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:42:49.850 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:42:51.222 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:42:51.231 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:42:51.232 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:42:51.232 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:42:51.393 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:42:51.394 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1489 ms 
+2020:09:04 10:42:51.670 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:42:52.007 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:42:52.034 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:42:52.047 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 2.967 seconds (JVM running for 5.199) 
+2020:09:04 10:42:58.993 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 10:42:58.994 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 10:42:59.004 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms 
+2020:09:04 10:42:59.178 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 10:42:59.179 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 10:42:59.180 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 10:42:59.195 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $ 
+2020:09:04 10:48:39.464 INFO  --- [RMI TCP Connection(10)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 10:48:40.171 INFO  --- [RMI TCP Connection(10)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:48:52.834 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 16072 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:48:52.839 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:48:54.305 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:48:54.319 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:48:54.321 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:48:54.321 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:48:54.484 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:48:54.484 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1582 ms 
+2020:09:04 10:48:54.786 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:48:55.098 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:48:55.133 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:48:55.153 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.059 seconds (JVM running for 5.44) 
+2020:09:04 10:49:08.177 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 10:49:08.178 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 10:49:08.187 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 8 ms 
+2020:09:04 10:49:08.374 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 10:49:08.375 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 10:49:08.375 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 10:49:08.393 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : Unexpected character (S) at position 0. 
+2020:09:04 10:49:39.702 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 10:49:40.568 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:49:44.754 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 17832 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:49:44.758 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:49:46.054 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:49:46.066 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:49:46.067 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:49:46.068 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:49:46.202 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:49:46.202 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1393 ms 
+2020:09:04 10:49:46.534 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:49:46.854 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:49:46.881 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:49:46.896 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 2.949 seconds (JVM running for 4.939) 
+2020:09:04 10:49:58.298 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 10:49:58.299 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 10:49:58.308 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 9 ms 
+2020:09:04 10:49:58.530 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 10:49:58.532 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 10:49:58.532 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 10:49:58.542 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : Unexpected character (S) at position 0. 
+2020:09:04 10:57:53.500 INFO  --- [RMI TCP Connection(10)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 10:57:54.387 INFO  --- [RMI TCP Connection(10)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:57:58.456 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 14304 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 10:57:58.465 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 10:58:00.268 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 10:58:00.286 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:58:00.289 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 10:58:00.289 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 10:58:00.518 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 10:58:00.518 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1924 ms 
+2020:09:04 10:58:00.888 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 10:58:01.317 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 10:58:01.356 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 10:58:01.376 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.801 seconds (JVM running for 6.511) 
+2020:09:04 11:01:10.398 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:01:10.400 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:01:10.414 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 14 ms 
+2020:09:04 11:01:10.601 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:01:10.602 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:01:10.603 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:01:10.614 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : Unexpected character (S) at position 0. 
+2020:09:04 11:08:57.725 INFO  --- [RMI TCP Connection(14)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:08:58.501 INFO  --- [RMI TCP Connection(14)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:09:05.733 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 4228 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:09:05.736 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:09:06.772 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:09:06.781 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:09:06.782 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:09:06.783 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:09:06.897 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:09:06.897 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1104 ms 
+2020:09:04 11:09:07.192 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:09:07.528 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:09:07.557 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:09:07.570 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 2.562 seconds (JVM running for 4.905) 
+2020:09:04 11:09:11.459 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:09:11.460 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:09:11.473 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 12 ms 
+2020:09:04 11:09:11.650 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:09:11.651 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:09:11.651 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:09:11.662 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : Unexpected character (S) at position 0. 
+2020:09:04 11:12:38.980 INFO  --- [RMI TCP Connection(7)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:12:39.850 INFO  --- [RMI TCP Connection(7)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:12:45.916 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 2336 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:12:45.923 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:12:47.715 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:12:47.731 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:12:47.733 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:12:47.734 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:12:47.929 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:12:47.929 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1901 ms 
+2020:09:04 11:12:48.289 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:12:48.661 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:12:48.698 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:12:48.718 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.821 seconds (JVM running for 6.676) 
+2020:09:04 11:12:50.187 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:12:50.188 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:12:50.198 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 9 ms 
+2020:09:04 11:12:50.366 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:12:50.368 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:12:50.368 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:12:50.376 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : Unexpected character (S) at position 0. 
+2020:09:04 11:13:10.198 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:13:11.428 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:13:16.670 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 14540 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:13:16.675 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:13:18.448 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:13:18.466 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:13:18.468 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:13:18.468 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:13:18.682 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:13:18.682 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1928 ms 
+2020:09:04 11:13:19.054 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:13:19.418 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:13:19.445 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:13:19.458 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.55 seconds (JVM running for 5.938) 
+2020:09:04 11:13:21.255 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:13:21.256 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:13:21.266 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms 
+2020:09:04 11:13:21.431 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:13:21.432 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:13:21.433 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:13:21.443 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : Unexpected character (S) at position 0. 
+2020:09:04 11:14:48.432 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:14:49.291 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:14:53.757 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 17856 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:14:53.760 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:14:54.772 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:14:54.780 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:14:54.781 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:14:54.781 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:14:54.998 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:14:54.998 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1194 ms 
+2020:09:04 11:14:55.365 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:14:55.707 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:14:55.746 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:14:55.763 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 2.744 seconds (JVM running for 5.015) 
+2020:09:04 11:15:11.704 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:15:12.982 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:15:17.093 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 7656 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:15:17.098 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:15:18.555 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:15:18.570 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:15:18.572 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:15:18.573 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:15:18.711 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:15:18.711 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1538 ms 
+2020:09:04 11:15:18.929 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:15:19.181 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:15:19.205 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:15:19.215 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 2.906 seconds (JVM running for 4.807) 
+2020:09:04 11:15:22.606 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:15:22.607 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:15:22.617 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 9 ms 
+2020:09:04 11:15:22.794 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:15:22.795 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:15:22.796 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:15:22.804 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'SendMsgVO': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"SendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다., templateCode=KTEST2, faledType=N, btnTypes=봇키워드, btnTxts=상담원 연결하기, btnUrls1=, btnUrls2=)"; line: 1, column: 10] 
+2020:09:04 11:18:40.747 INFO  --- [RMI TCP Connection(8)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:18:41.740 INFO  --- [RMI TCP Connection(8)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:18:46.862 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 15136 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:18:46.870 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:18:48.942 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:18:48.960 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:18:48.962 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:18:48.963 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:18:49.175 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:18:49.176 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2199 ms 
+2020:09:04 11:18:49.575 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:18:50.146 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:18:50.202 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:18:50.219 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.605 seconds (JVM running for 6.701) 
+2020:09:04 11:18:53.083 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:18:53.084 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:18:53.098 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 13 ms 
+2020:09:04 11:18:53.267 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:18:53.268 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:18:53.269 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:18:53.281 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":"","btnUrls2":""} 
+2020:09:04 11:18:53.287 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 
+2020:09:04 11:18:53.291 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:18:55.530 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 11:18:55.589 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : org.springframework.web.client.RestClientException: No HttpMessageConverter for kakao.vo.KakaoSendMsgVO and content type "application/x-www-form-urlencoded;charset=UTF-8" 
+2020:09:04 11:25:52.892 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:25:54.007 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:26:00.773 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 11480 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:26:00.780 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:26:02.624 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:26:02.640 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:26:02.642 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:26:02.643 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:26:02.855 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:26:02.855 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1977 ms 
+2020:09:04 11:26:03.366 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:26:03.758 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:26:03.799 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:26:03.819 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.15 seconds (JVM running for 6.445) 
+2020:09:04 11:26:05.573 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:26:05.574 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:26:05.584 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms 
+2020:09:04 11:26:05.757 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:26:05.759 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:26:05.759 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:26:05.771 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":"","btnUrls2":""} 
+2020:09:04 11:26:05.776 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:26:05.777 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:26:07.810 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 11:26:07.835 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : org.springframework.web.client.RestClientException: No HttpMessageConverter for kakao.vo.KakaoSendMsgVO and content type "application/x-www-form-urlencoded" 
+2020:09:04 11:47:36.291 INFO  --- [RMI TCP Connection(26)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:47:37.297 INFO  --- [RMI TCP Connection(26)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:47:53.988 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 4352 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:47:53.992 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:47:55.515 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:47:55.527 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:47:55.528 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:47:55.529 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:47:55.696 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:47:55.697 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1641 ms 
+2020:09:04 11:47:55.980 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:47:56.265 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:47:56.293 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:47:56.308 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.216 seconds (JVM running for 5.384) 
+2020:09:04 11:47:59.555 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:47:59.557 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:47:59.583 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 23 ms 
+2020:09:04 11:47:59.967 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:47:59.969 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:47:59.970 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:48:00.001 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":"","btnUrls2":""} 
+2020:09:04 11:48:00.019 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:48:00.021 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:48:01.787 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 11:48:01.811 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : org.springframework.web.client.RestClientException: No HttpMessageConverter for java.util.HashMap and content type "application/x-www-form-urlencoded" 
+2020:09:04 11:55:50.041 INFO  --- [RMI TCP Connection(11)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 11:55:51.048 INFO  --- [RMI TCP Connection(11)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:56:04.839 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 8932 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 11:56:04.843 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 11:56:07.373 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 11:56:07.391 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:56:07.392 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 11:56:07.393 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 11:56:07.608 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 11:56:07.609 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2705 ms 
+2020:09:04 11:56:08.273 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 11:56:08.780 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 11:56:08.821 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 11:56:08.854 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.855 seconds (JVM running for 7.061) 
+2020:09:04 11:56:11.257 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 11:56:11.258 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 11:56:11.268 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 9 ms 
+2020:09:04 11:56:11.575 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:56:11.576 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:56:11.577 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 11:56:11.607 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":"","btnUrls2":""} 
+2020:09:04 11:56:11.621 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 11:56:11.623 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 11:56:14.187 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 11:56:14.218 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : org.springframework.web.client.RestClientException: No HttpMessageConverter for java.util.HashMap and content type "application/x-www-form-urlencoded;charset=UTF-8" 
+2020:09:04 12:09:18.774 INFO  --- [RMI TCP Connection(16)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:09:19.530 INFO  --- [RMI TCP Connection(16)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:09:27.223 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 5188 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:09:27.230 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:09:28.957 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:09:28.974 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:09:28.976 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:09:28.977 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:09:29.165 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:09:29.165 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1832 ms 
+2020:09:04 12:09:29.560 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:09:29.934 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:09:29.973 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:09:29.991 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.925 seconds (JVM running for 6.454) 
+2020:09:04 12:09:38.277 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:09:38.278 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:09:38.284 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 6 ms 
+2020:09:04 12:09:38.413 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:09:38.413 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:09:38.413 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:09:38.425 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":"","btnUrls2":""} 
+2020:09:04 12:09:38.431 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:09:38.432 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:09:40.423 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 12:09:40.718 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : cmid= 
+2020:09:04 12:13:11.029 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:13:11.030 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:13:11.030 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:13:11.033 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:13:11.036 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:13:11.037 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:13:11.047 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 12:13:11.131 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : cmid= 
+2020:09:04 12:17:12.533 INFO  --- [RMI TCP Connection(11)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:17:13.468 INFO  --- [RMI TCP Connection(11)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:17:18.782 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 8808 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:17:18.792 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:17:20.583 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:17:20.600 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:17:20.601 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:17:20.603 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:17:20.822 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:17:20.823 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1890 ms 
+2020:09:04 12:17:21.258 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:17:21.665 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:17:21.705 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:17:21.732 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.063 seconds (JVM running for 6.24) 
+2020:09:04 12:17:29.112 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:17:29.113 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:17:29.123 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms 
+2020:09:04 12:17:29.289 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:17:29.290 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:17:29.290 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:17:29.303 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:17:29.308 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:17:29.309 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:17:30.967 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 12:17:31.233 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : cmid= 
+2020:09:04 12:18:59.538 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:19:00.329 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:19:06.000 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 5488 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:19:06.007 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:19:07.715 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:19:07.734 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:19:07.736 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:19:07.737 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:19:07.927 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:19:07.928 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1821 ms 
+2020:09:04 12:19:08.330 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:19:08.707 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:19:08.745 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:19:08.765 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.857 seconds (JVM running for 6.225) 
+2020:09:04 12:19:10.834 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:19:10.835 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:19:10.848 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 13 ms 
+2020:09:04 12:19:11.019 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:19:11.020 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:19:11.020 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:19:11.032 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:19:11.040 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:19:11.041 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:19:11.052 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : {btnTxts=[상담원 연결하기], btnTypes=[봇키워드], btnUrls1=[], callBack=[01029404738], class=[class kakao.vo.KakaoSendMsgVO], faledType=[N], msg=[안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.], phone=[01040392705], templateCode=[KTEST2]} 
+2020:09:04 12:19:13.246 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 12:19:13.501 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : cmid= 
+2020:09:04 12:21:59.321 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:21:59.987 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:22:05.216 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 12388 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:22:05.223 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:22:07.063 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:22:07.082 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:22:07.084 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:22:07.085 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:22:07.367 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:22:07.368 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2051 ms 
+2020:09:04 12:22:07.954 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:22:08.628 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:22:08.692 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:22:08.723 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.535 seconds (JVM running for 6.516) 
+2020:09:04 12:22:10.157 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:22:10.158 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:22:10.171 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 12 ms 
+2020:09:04 12:22:10.350 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:22:10.351 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:22:10.352 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:22:10.370 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:22:10.376 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:22:10.378 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:22:10.393 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : {btnTxts=[상담원 연결하기], btnTypes=[봇키워드], btnUrls1=[], callBack=[01029404738], class=[class kakao.vo.KakaoSendMsgVO], faledType=[N], msg=[안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.], phone=[01040392705], templateCode=[KTEST2]} 
+2020:09:04 12:22:12.172 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 12:22:12.379 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : cmid= 
+2020:09:04 12:26:29.597 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:26:30.507 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:26:36.709 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 14212 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:26:36.713 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:26:38.040 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:26:38.056 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:26:38.057 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:26:38.058 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:26:38.212 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:26:38.212 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1436 ms 
+2020:09:04 12:26:38.442 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:26:38.688 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:26:38.708 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:26:38.718 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 2.841 seconds (JVM running for 4.842) 
+2020:09:04 12:26:42.057 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:26:42.058 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:26:42.067 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 8 ms 
+2020:09:04 12:26:42.235 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:26:42.237 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:26:42.238 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:26:42.249 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:26:42.255 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:26:42.256 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:26:42.290 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : map:{class=[class org.json.simple.JSONObject], empty=[false]} 
+2020:09:04 12:26:44.131 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 12:26:44.375 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : cmid= 
+2020:09:04 12:28:37.336 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:28:38.115 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:32:43.070 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 17232 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:32:43.075 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:32:44.918 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:32:44.937 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:32:44.939 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:32:44.940 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:32:45.146 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:32:45.146 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1965 ms 
+2020:09:04 12:32:45.525 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:32:45.901 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:32:45.940 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:32:45.959 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.022 seconds (JVM running for 6.16) 
+2020:09:04 12:32:48.010 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:32:48.011 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:32:48.025 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 13 ms 
+2020:09:04 12:32:48.196 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:32:48.198 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:32:48.198 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:32:48.210 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:32:48.216 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:32:48.218 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:32:48.218 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오 전체:KakaoSendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다., templateCode=KTEST2, faledType=N, btnTypes=봇키워드, btnTxts=상담원 연결하기, btnUrls1=) 
+2020:09:04 12:32:48.235 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : com.fasterxml.jackson.databind.JsonMappingException: Cannot find a deserializer for non-concrete Map type [map type; class org.springframework.util.MultiValueMap, [simple type, class java.lang.Object] -> [collection type; class java.util.List, contains [simple type, class java.lang.Object]]]
+ at [Source: (String)"{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""}"; line: 1, column: 1] 
+2020:09:04 12:45:25.384 INFO  --- [RMI TCP Connection(17)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:45:26.193 INFO  --- [RMI TCP Connection(17)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:45:53.284 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 17356 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:45:53.291 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:45:55.210 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:45:55.225 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:45:55.226 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:45:55.227 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:45:55.417 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:45:55.418 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2017 ms 
+2020:09:04 12:45:55.925 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:45:56.304 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:45:56.349 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:45:56.368 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.284 seconds (JVM running for 6.792) 
+2020:09:04 12:46:08.857 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:46:08.858 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:46:08.869 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms 
+2020:09:04 12:46:09.050 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:46:09.051 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:46:09.052 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:46:09.063 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:46:09.069 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:46:09.070 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:46:09.070 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 전체:phone=01040392705callback=01029404738msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.template_code=KTEST2faled_type=Nbtn_types=봇키워드btn_txts=상담원 연결하기btn_urls1= 
+2020:09:04 12:46:09.078 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : Unexpected character (p) at position 0. 
+2020:09:04 12:47:52.910 INFO  --- [RMI TCP Connection(4)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:47:53.795 INFO  --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:47:59.051 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 11208 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:47:59.056 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:48:00.505 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:48:00.522 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:48:00.524 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:48:00.525 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:48:00.741 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:48:00.741 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1615 ms 
+2020:09:04 12:48:01.054 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:48:01.400 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:48:01.426 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:48:01.439 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 3.286 seconds (JVM running for 5.688) 
+2020:09:04 12:48:06.130 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:48:06.131 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:48:06.142 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms 
+2020:09:04 12:48:06.313 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:48:06.315 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:48:06.315 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:48:06.330 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:48:06.337 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:48:06.338 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:48:06.338 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 전체:phone:01040392705,callback:01029404738,msg:안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.,template_code:KTEST2,faled_type:N,btn_types:봇키워드,btn_txts:상담원 연결하기,btn_urls1: 
+2020:09:04 12:48:06.345 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : Unexpected character (p) at position 0. 
+2020:09:04 12:49:27.713 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:49:28.676 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:49:32.640 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 16340 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:49:32.642 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:49:34.004 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:49:34.014 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:49:34.015 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:49:34.016 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:49:34.202 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:49:34.202 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1513 ms 
+2020:09:04 12:49:34.525 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:49:34.725 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:49:34.748 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:49:34.760 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 2.713 seconds (JVM running for 4.466) 
+2020:09:04 12:49:40.468 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:49:40.469 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:49:40.477 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 7 ms 
+2020:09:04 12:49:40.625 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:49:40.625 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:49:40.625 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:49:40.634 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:49:40.640 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:49:40.641 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:49:40.642 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 전체:KakaoSendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다., templateCode=KTEST2, faledType=N, btnTypes=봇키워드, btnTxts=상담원 연결하기, btnUrls1=) 
+2020:09:04 12:49:40.648 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : Unexpected character (K) at position 0. 
+2020:09:04 12:53:57.991 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:53:58.947 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:54:09.792 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 13624 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:54:09.799 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:54:11.632 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:54:11.654 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:54:11.656 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:54:11.657 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:54:11.883 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:54:11.884 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1986 ms 
+2020:09:04 12:54:12.320 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:54:12.745 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:54:12.782 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:54:12.802 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.11 seconds (JVM running for 6.132) 
+2020:09:04 12:54:14.386 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:54:14.386 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:54:14.393 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 6 ms 
+2020:09:04 12:54:14.583 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:54:14.585 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:54:14.585 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:54:14.600 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:54:14.607 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:54:14.608 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:54:14.609 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 전체:KakaoSendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다., templateCode=KTEST2, faledType=N, btnTypes=봇키워드, btnTxts=상담원 연결하기, btnUrls1=) 
+2020:09:04 12:54:14.656 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 스트링:JSON.parse({"phone":"01040392705","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","callback":"01029404738","template_code":"KTEST2","faled_type":"N","btn_types":"봇키워드","btn_txts":"상담원 연결하기","btn_urls1":""}) 
+2020:09:04 12:54:14.672 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : map:{bytes=[[B@48aa1841], class=[class java.lang.String], empty=[false]} 
+2020:09:04 12:54:16.551 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 12:54:16.795 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : cmid= 
+2020:09:04 12:55:49.661 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 12:55:50.599 INFO  --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:55:56.276 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 2968 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 12:55:56.283 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 12:55:58.081 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 12:55:58.097 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:55:58.099 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 12:55:58.100 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 12:55:58.269 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 12:55:58.269 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1887 ms 
+2020:09:04 12:55:58.639 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 12:55:59.035 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 12:55:59.075 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 12:55:59.095 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.092 seconds (JVM running for 6.201) 
+2020:09:04 12:56:00.978 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 12:56:00.979 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 12:56:00.988 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 9 ms 
+2020:09:04 12:56:01.162 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:56:01.163 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:56:01.163 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 12:56:01.177 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 12:56:01.183 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 12:56:01.184 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 12:56:01.185 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 전체:KakaoSendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다., templateCode=KTEST2, faledType=N, btnTypes=봇키워드, btnTxts=상담원 연결하기, btnUrls1=) 
+2020:09:04 12:56:01.215 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 스트링:JSON.parse({"phone":"01040392705","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","callback":"01029404738","template_code":"KTEST2","faled_type":"N","btn_types":"봇키워드","btn_txts":"상담원 연결하기","btn_urls1":""}) 
+2020:09:04 12:56:01.230 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : java.lang.NullPointerException 
+2020:09:04 13:01:32.867 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 13:01:33.639 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 13:01:38.310 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 6168 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 13:01:38.317 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 13:01:40.125 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 13:01:40.146 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 13:01:40.148 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 13:01:40.148 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 13:01:40.360 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 13:01:40.361 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1933 ms 
+2020:09:04 13:01:40.741 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 13:01:41.220 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 13:01:41.283 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 13:01:41.310 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 4.059 seconds (JVM running for 6.093) 
+2020:09:04 13:01:42.826 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 13:01:42.827 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 13:01:42.837 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 9 ms 
+2020:09:04 13:01:43.008 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 13:01:43.010 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 13:01:43.010 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 13:01:43.022 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 13:01:43.028 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 13:01:43.028 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 13:01:43.028 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 전체:KakaoSendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다., templateCode=KTEST2, faledType=N, btnTypes=봇키워드, btnTxts=상담원 연결하기, btnUrls1=) 
+2020:09:04 13:01:43.053 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 카카오 스트링:{"phone":"01040392705","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","callback":"01029404738","template_code":"KTEST2","faled_type":"N","btn_types":"봇키워드","btn_txts":"상담원 연결하기","btn_urls1":""} 
+2020:09:04 13:01:43.117 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : map:{class=[class java.util.LinkedHashMap], empty=[false]} 
+2020:09:04 13:01:44.872 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 13:01:45.639 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : cmid= 
+2020:09:04 13:07:04.051 INFO  --- [RMI TCP Connection(7)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 13:07:05.324 INFO  --- [RMI TCP Connection(7)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 13:07:11.227 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 5388 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 13:07:11.231 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 13:07:12.498 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 13:07:12.513 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 13:07:12.515 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 13:07:12.516 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 13:07:12.650 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 13:07:12.651 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1375 ms 
+2020:09:04 13:07:12.982 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 13:07:13.305 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 13:07:13.331 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 13:07:13.344 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 2.857 seconds (JVM running for 4.807) 
+2020:09:04 13:07:16.523 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 13:07:16.524 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 13:07:16.535 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 10 ms 
+2020:09:04 13:07:16.706 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 13:07:16.708 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 13:07:16.708 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST2 
+2020:09:04 13:07:16.720 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","templateCode":"KTEST2","faledType":"N","btnTypes":"봇키워드","btnTxts":"상담원 연결하기","btnUrls1":""} 
+2020:09:04 13:07:16.726 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오: 안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다. 
+2020:09:04 13:07:16.727 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 13:07:16.728 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오 전체:KakaoSendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다., templateCode=KTEST2, faledType=N, btnTypes=봇키워드, btnTxts=상담원 연결하기, btnUrls1=) 
+2020:09:04 13:07:16.755 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오 스트링:{"phone":"01040392705","msg":"안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.","callback":"01029404738","template_code":"KTEST2","faled_type":"N","btn_types":"봇키워드","btn_txts":"상담원 연결하기","btn_urls1":""} 
+2020:09:04 13:07:16.787 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오 Map:{phone=01040392705, msg=안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다., callback=01029404738, template_code=KTEST2, faled_type=N, btn_types=봇키워드, btn_txts=상담원 연결하기, btn_urls1=} 
+2020:09:04 13:07:16.789 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : map:{phone=[01040392705], msg=[안녕하세요 고퀄입니다. 고객님의 주문이 완료되었습니다. 감사합니다.], callback=[01029404738], template_code=[KTEST2], faled_type=[N], btn_types=[봇키워드], btn_txts=[상담원 연결하기], btn_urls1=[]} 
+2020:09:04 13:07:18.462 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 13:07:18.743 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : cmid=2020090413071859176201 
+2020:09:04 14:45:13.991 INFO  --- [RMI TCP Connection(100)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 14:45:14.414 INFO  --- [RMI TCP Connection(100)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 14:45:17.334 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 6652 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 14:45:17.337 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 14:45:18.007 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 14:45:18.015 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 14:45:18.016 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 14:45:18.016 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 14:45:18.095 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 14:45:18.096 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 729 ms 
+2020:09:04 14:45:18.250 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 14:45:18.419 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 14:45:18.442 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 14:45:18.449 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 1.534 seconds (JVM running for 2.494) 
+2020:09:04 14:45:23.277 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 14:45:23.278 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 14:45:23.282 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 4 ms 
+2020:09:04 14:45:23.349 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 안녕하세요 #{안유진}님!           예약정보를 안내드립니다.         일자:#{2020-09-04}      시간: #{오후3시}         감사합니다. 
+2020:09:04 14:45:23.350 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 14:45:23.350 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 템플릿KTEST1 
+2020:09:04 14:45:23.355 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 #{안유진}님!           예약정보를 안내드립니다.         일자:#{2020-09-04}      시간: #{오후3시}         감사합니다.","templateCode":"KTEST1","faledType":"N","btnTypes":"웹링크","btnTxts":"홈페이지조회","btnUrls1":"https://www.goqual.com/","btnUrls2":"https://www.goqual.com/"} 
+2020:09:04 14:45:23.357 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오: 안녕하세요 #{안유진}님!           예약정보를 안내드립니다.         일자:#{2020-09-04}      시간: #{오후3시}         감사합니다. 
+2020:09:04 14:45:23.357 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 14:45:23.357 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오 전체:KakaoSendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 #{안유진}님!           예약정보를 안내드립니다.         일자:#{2020-09-04}      시간: #{오후3시}         감사합니다., templateCode=KTEST1, faledType=N, btnTypes=웹링크, btnTxts=홈페이지조회, btnUrls1=https://www.goqual.com/, btnUrls2=https://www.goqual.com/) 
+2020:09:04 14:45:23.367 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오 스트링:{"phone":"01040392705","msg":"안녕하세요 #{안유진}님!           예약정보를 안내드립니다.         일자:#{2020-09-04}      시간: #{오후3시}         감사합니다.","callback":"01029404738","template_code":"KTEST1","faled_type":"N","btn_types":"웹링크","btn_txts":"홈페이지조회","btn_urls1":"https://www.goqual.com/","btn_urls2":"https://www.goqual.com/"} 
+2020:09:04 14:45:23.377 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : 카카오 Map:{phone=01040392705, msg=안녕하세요 #{안유진}님!           예약정보를 안내드립니다.         일자:#{2020-09-04}      시간: #{오후3시}         감사합니다., callback=01029404738, template_code=KTEST1, faled_type=N, btn_types=웹링크, btn_txts=홈페이지조회, btn_urls1=https://www.goqual.com/, btn_urls2=https://www.goqual.com/} 
+2020:09:04 14:45:23.378 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : map:{phone=[01040392705], msg=[안녕하세요 #{안유진}님!           예약정보를 안내드립니다.         일자:#{2020-09-04}      시간: #{오후3시}         감사합니다.], callback=[01029404738], template_code=[KTEST1], faled_type=[N], btn_types=[웹링크], btn_txts=[홈페이지조회], btn_urls1=[https://www.goqual.com/], btn_urls2=[https://www.goqual.com/]} 
+2020:09:04 14:45:24.036 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 14:45:24.760 INFO  --- [http-nio-8080-exec-1] kakao.controller.KakaoTest : cmid=2020090414452460290701 
+2020:09:04 14:47:16.517 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 안녕하세요 안유진님!           예약정보를 안내드립니다.         일자:2020-09-04        시간: 오후3시              감사합니다. 
+2020:09:04 14:47:16.517 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 14:47:16.517 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 템플릿KTEST1 
+2020:09:04 14:47:16.519 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : String mapper{"phone":"01040392705","callBack":"01029404738","msg":"안녕하세요 안유진님!           예약정보를 안내드립니다.         일자:2020-09-04        시간: 오후3시              감사합니다.","templateCode":"KTEST1","faledType":"N","btnTypes":"웹링크","btnTxts":"홈페이지조회","btnUrls1":"https://www.goqual.com/","btnUrls2":"https://www.goqual.com/"} 
+2020:09:04 14:47:16.520 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 카카오: 안녕하세요 안유진님!           예약정보를 안내드립니다.         일자:2020-09-04        시간: 오후3시              감사합니다. 
+2020:09:04 14:47:16.521 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 01029404738 
+2020:09:04 14:47:16.521 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 카카오 전체:KakaoSendMsgVO(phone=01040392705, callBack=01029404738, msg=안녕하세요 안유진님!           예약정보를 안내드립니다.         일자:2020-09-04        시간: 오후3시              감사합니다., templateCode=KTEST1, faledType=N, btnTypes=웹링크, btnTxts=홈페이지조회, btnUrls1=https://www.goqual.com/, btnUrls2=https://www.goqual.com/) 
+2020:09:04 14:47:16.524 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 카카오 스트링:{"phone":"01040392705","msg":"안녕하세요 안유진님!           예약정보를 안내드립니다.         일자:2020-09-04        시간: 오후3시              감사합니다.","callback":"01029404738","template_code":"KTEST1","faled_type":"N","btn_types":"웹링크","btn_txts":"홈페이지조회","btn_urls1":"https://www.goqual.com/","btn_urls2":"https://www.goqual.com/"} 
+2020:09:04 14:47:16.525 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : 카카오 Map:{phone=01040392705, msg=안녕하세요 안유진님!           예약정보를 안내드립니다.         일자:2020-09-04        시간: 오후3시              감사합니다., callback=01029404738, template_code=KTEST1, faled_type=N, btn_types=웹링크, btn_txts=홈페이지조회, btn_urls1=https://www.goqual.com/, btn_urls2=https://www.goqual.com/} 
+2020:09:04 14:47:16.525 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : map:{phone=[01040392705], msg=[안녕하세요 안유진님!           예약정보를 안내드립니다.         일자:2020-09-04        시간: 오후3시              감사합니다.], callback=[01029404738], template_code=[KTEST1], faled_type=[N], btn_types=[웹링크], btn_txts=[홈페이지조회], btn_urls1=[https://www.goqual.com/], btn_urls2=[https://www.goqual.com/]} 
+2020:09:04 14:47:16.530 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : http://api.apistore.co.kr/kko/1/msg/devteam 
+2020:09:04 14:47:16.643 INFO  --- [http-nio-8080-exec-5] kakao.controller.KakaoTest : cmid=2020090414471652670701 
+2020:09:04 17:03:18.309 INFO  --- [RMI TCP Connection(140)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 17:03:18.737 INFO  --- [RMI TCP Connection(140)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
+2020:09:04 17:03:24.610 INFO  --- [main] kakao.KakaoApiPjApplication : Starting KakaoApiPjApplication on LAPTOP-5441OMQF with PID 11780 (C:\Users\USER\eclipse-kakao\KakaoApiPj\bin\main started by USER in C:\Users\USER\eclipse-kakao\KakaoApiPj) 
+2020:09:04 17:03:24.612 INFO  --- [main] kakao.KakaoApiPjApplication : The following profiles are active: local 
+2020:09:04 17:03:25.307 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:09:04 17:03:25.314 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:09:04 17:03:25.315 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:09:04 17:03:25.315 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37] 
+2020:09:04 17:03:25.394 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:09:04 17:03:25.395 INFO  --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 751 ms 
+2020:09:04 17:03:25.547 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 
+2020:09:04 17:03:25.714 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:09:04 17:03:25.735 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:09:04 17:03:25.742 INFO  --- [main] kakao.KakaoApiPjApplication : Started KakaoApiPjApplication in 1.557 seconds (JVM running for 2.401) 
+2020:09:04 17:03:30.650 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:09:04 17:03:30.651 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:09:04 17:03:30.654 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : Completed initialization in 3 ms 
+2020:09:04 17:03:30.731 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 2020090414471652670701 
+2020:09:04 18:23:56.517 INFO  --- [RMI TCP Connection(84)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:04 18:23:56.929 INFO  --- [RMI TCP Connection(84)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 

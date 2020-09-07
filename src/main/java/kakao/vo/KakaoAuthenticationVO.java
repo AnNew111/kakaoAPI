@@ -1,13 +1,20 @@
 package kakao.vo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 
 @Data
 public class KakaoAuthenticationVO {
 
-	//발신번호 인증,등록
-	private String sendnumber;
+	@JsonProperty("sendnumber")
+	private String sendNumber;
+	
 	private String comment;
-	private String pintype;
 
+	@JsonProperty("pintype")
+	private String pinType;
+
+	@JsonProperty("pincode")
+	private String pinCode;
 }

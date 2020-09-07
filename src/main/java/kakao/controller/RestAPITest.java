@@ -41,7 +41,7 @@ import org.springframework.web.client.RestTemplate;
   public String calAPI() {
   
 	  String jsonInString = "";
-	
+	  String a="";
 	  try { 
 		  HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory(); 
 		  factory.setConnectTimeout(5000);//타임아웃 설정 5초 
@@ -64,7 +64,7 @@ import org.springframework.web.client.RestTemplate;
 		  JSONParser jsonPaser = new JSONParser();
 		  JSONArray jsonArray = (JSONArray) jsonPaser.parse(response.getBody().toString());
 		  jsonInString = jsonArray.toString();
-		  
+		  a = response.getBody().toString();
 	  }catch(HttpClientErrorException|HttpServerErrorException e) {
 		  System.out.println("ㅠㅠ");
 		  System.out.println(e.toString()); 
@@ -72,7 +72,7 @@ import org.springframework.web.client.RestTemplate;
 		  System.out.println(e.toString()); 
 	  }
 	  
-	  return jsonInString;
+	  return a;
   
   	}
   
