@@ -33,7 +33,8 @@ import com.google.gson.Gson;
 
 import kakao.KakaoApiSettng;
 import kakao.KakaoConfig;
-import kakao.KakaoReportCode;
+import kakao.ReportMsgRsltCode;
+import kakao.ReportRsltCode;
 import kakao.vo.AuthenticationVO;
 import kakao.vo.CallingNumberVO;
 import kakao.vo.KakaoAuthenticationVO;
@@ -112,7 +113,6 @@ public class KakaoTest {
 		String jsonInString = "";
 		String reportUri = kakaoConfig.getReportUri();
 		String clientId = kakaoConfig.getClientId();
-		String r = "";
 		try { 
 			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 			  
@@ -128,21 +128,21 @@ public class KakaoTest {
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 			  
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
-
-			  String rslt = jsonObj.get("RSLT").toString();
+			  		  
+			  String rslt = "A"+jsonObj.get("RSLT").toString();
+			  String msgRslt = "B"+jsonObj.get("msg_rslt").toString();
 			  logger.info(rslt);
-			  String description = "";
-			  for(KakaoReportCode code : KakaoReportCode.values()) {
-				  if(code.getValue().toString().equals(rslt)) {
-					  description = code.toString();
-				  }break;
-			  }
-			  logger.info(description);
+			  
+			  String descriptionA = ReportRsltCode.valueOf(rslt).getValue().toString();
+			  String descriptionB = ReportMsgRsltCode.valueOf(msgRslt).getValue().toString();
+			  logger.info(descriptionA);
+			 
 			  jsonObj.remove("RSLT");
-			  jsonObj.put("RSLT",description);
+			  jsonObj.put("RSLT",descriptionA);  
+			  jsonObj.remove("msg_rslt");
+			  jsonObj.put("msg_rslt",descriptionB);
 			  
 			  jsonInString = jsonObj.toString();
-			  r = response.toString();
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
 			  logger.info(e.toString()); 
 		  }catch(Exception e) {
@@ -151,6 +151,7 @@ public class KakaoTest {
 		
 		return jsonInString;
 	}
+
 	
 	//템플릿 조회
 	@PostMapping(value="/template")

@@ -59,5 +59,10 @@ public class KakaoApiSettng {
 		Object obj = jsonPaser.parse(response.getBody().toString());
 		return  (JSONObject)obj;
 	}
+	
+	
+
+
+
 
 }

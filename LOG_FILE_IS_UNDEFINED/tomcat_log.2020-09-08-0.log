@@ -457,3 +457,5 @@
 2020:09:08 02:47:27.843 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 2020090802314217191401 
 2020:09:08 02:47:28.634 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 0 
 2020:09:08 02:47:28.635 INFO  --- [http-nio-8080-exec-2] kakao.controller.KakaoTest : 성공 
+2020:09:08 02:59:22.051 INFO  --- [RMI TCP Connection(14)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2020:09:08 02:59:22.484 INFO  --- [RMI TCP Connection(14)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor' 
