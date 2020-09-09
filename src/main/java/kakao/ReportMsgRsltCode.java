@@ -33,6 +33,7 @@ public enum ReportMsgRsltCode {
 	B0U("잘못된_컨텐츠");
 	
 	
+//	private final Integer code;
 	
 	private final String value;
 	

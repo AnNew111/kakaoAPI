@@ -1,9 +1,11 @@
 package kakao.controller;
 
-
 import java.net.URI;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import javax.validation.Valid;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -19,6 +21,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -62,47 +66,52 @@ public class KakaoTest {
 
 	//카카오 알림톡 전송
 	@PostMapping(value = "/kakaoSendMsg")
-	public String  kakaotalkSend(@RequestBody SendMsgVO sendVO) {
+	public String  kakaotalkSend(@RequestBody @Valid SendMsgVO sendVO ,BindingResult bindingResult) {
+		
 		String jsonInString = "";
 		String sendMsgUri = kakaoConfig.getSendMsgUri();
 		String clientId = kakaoConfig.getClientId();
-		logger.info(sendVO.getMsg());
-		logger.info(sendVO.getCallBack());
-		logger.info("템플릿"+sendVO.getTemplateCode());
-
-		try { 
-			  Gson gson = new Gson();
-			  String mappedValue = gson.toJson(sendVO);
-			  logger.info("String mapper"+mappedValue);
-			  
-			  KakaoSendMsgVO kakaoSendMsgVO = gson.fromJson(mappedValue, KakaoSendMsgVO.class);
-
-			  logger.info("카카오 전체:"+kakaoSendMsgVO.toString());
-			  
-			  ObjectMapper mapper = new ObjectMapper();
-			  String jobj = mapper.writeValueAsString(kakaoSendMsgVO);
-			  Map<String,String> map = mapper.readValue(jobj, Map.class);
-			  
-			  MultiValueMap<String, String> result = new LinkedMultiValueMap<>();
-			  result.setAll(map);
-			  			  
-			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
-			  HttpHeaders header = kakaoApiSetting.headerSet();
-			  HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(result,header);		  
-			  //create(String) : URI 객체 생성함
-			  URI url = URI.create(sendMsgUri+"/"+clientId);		  
-			 
-			  ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);			  
-			  
-			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
-			  
-			  jsonInString = jsonObj.toString();
-			  logger.info("cmid="+jsonObj.get("cmid")); 
-		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  logger.info(e.toString()); 
-		  }catch(Exception e) {
-			  logger.info(e.toString()); 
-		  }  
+		
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> list = bindingResult.getAllErrors();
+			for(ObjectError e : list) {
+				logger.info(e.getDefaultMessage());
+			}
+		}else {
+			try { 
+				  Gson gson = new Gson();
+				  String mappedValue = gson.toJson(sendVO);
+				  logger.info("String mapper"+mappedValue);
+				  
+				  KakaoSendMsgVO kakaoSendMsgVO = gson.fromJson(mappedValue, KakaoSendMsgVO.class);
+	
+				  logger.info("카카오 전체:"+kakaoSendMsgVO.toString());
+				  
+				  ObjectMapper mapper = new ObjectMapper();
+				  String jobj = mapper.writeValueAsString(kakaoSendMsgVO);
+				  Map<String,String> map = mapper.readValue(jobj, Map.class);
+				  
+				  MultiValueMap<String, String> result = new LinkedMultiValueMap<>();
+				  result.setAll(map);
+				  			  
+				  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
+				  HttpHeaders header = kakaoApiSetting.headerSet();
+				  HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(result,header);		  
+				  //create(String) : URI 객체 생성함
+				  URI url = URI.create(sendMsgUri+"/"+clientId);		  
+				 
+				  ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);			  
+				  
+				  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
+				  
+				  jsonInString = jsonObj.toString();
+				  logger.info("cmid="+jsonObj.get("cmid")); 
+			  }catch(HttpClientErrorException|HttpServerErrorException e) {
+				  logger.info(e.toString()); 
+			  }catch(Exception e) {
+				  logger.info(e.toString()); 
+			  }  
+		}
 		return jsonInString;	
 	}
 	//리포트 조회        
@@ -129,18 +138,25 @@ public class KakaoTest {
 			  
 			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 			  		  
-			  String rslt = "A"+jsonObj.get("RSLT").toString();
-			  String msgRslt = "B"+jsonObj.get("msg_rslt").toString();
+			  //String rslt = "A"+jsonObj.get("RSLT").toString();
+			 // String msgRslt = "B"+jsonObj.get("msg_rslt").toString();
+			  String rslt = jsonObj.get("RSLT").toString();
 			  logger.info(rslt);
+			  String descriptionA = "";
+			  for(ReportRsltCode reportRsltCode : ReportRsltCode.values()) {
+				  if(rslt.equals(reportRsltCode.getCode())){
+					  descriptionA = ReportRsltCode.valueOf(reportRsltCode.toString()).getValue().toString();
+					  break;
+				  }
+			  }
 			  
-			  String descriptionA = ReportRsltCode.valueOf(rslt).getValue().toString();
-			  String descriptionB = ReportMsgRsltCode.valueOf(msgRslt).getValue().toString();
+//			  String descriptionB = ReportMsgRsltCode.valueOf(msgRslt).getValue().toString();
 			  logger.info(descriptionA);
 			 
 			  jsonObj.remove("RSLT");
 			  jsonObj.put("RSLT",descriptionA);  
-			  jsonObj.remove("msg_rslt");
-			  jsonObj.put("msg_rslt",descriptionB);
+//			  jsonObj.remove("msg_rslt");
+//			  jsonObj.put("msg_rslt",descriptionB);
 			  
 			  jsonInString = jsonObj.toString();
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
@@ -155,7 +171,7 @@ public class KakaoTest {
 	
 	//템플릿 조회
 	@PostMapping(value="/template")
-	public String templateSearch(@RequestBody TemplateVO templateVO) {
+	public String templateSearch(@RequestBody @Valid TemplateVO templateVO, BindingResult bindingResult) {
 		logger.info(templateVO.getTempateCode());
 		String template_code = templateVO.getTempateCode();
 		String status = templateVO.getStatus();
@@ -163,73 +179,89 @@ public class KakaoTest {
 		String templateUri = kakaoConfig.getTemplateUri();
 		String clientId = kakaoConfig.getClientId();
 		String a = "";
-		try { 
-		      RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
-			  
-			  HttpHeaders header = kakaoApiSetting.headerSet();
 
-			  //HttpEntity는 Http프로토콜을 이용하는 통신의  header와 body관련 정보를 저장할 수 있게끔 함.
-			  //RequestBody로 데이터를 전달하는 HTTP.POST의 경우 VO 그대로 데이터 전달 가능
-			  HttpEntity<?> entity = new HttpEntity<>(header);
-			  
-			  //create(String) : URI 객체 생성함
-			  URI uri = URI.create(templateUri+"/"+clientId+"?"+"template_code="+template_code+"&"+"status="+status);
-			  logger.info(uri.toString());
-			    
-			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
-			  jsonInString = jsonObj.toString(); 
-			  a = response.getBody().toString();
-			  logger.info(a);
-		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  logger.info(e.toString()); 
-		  }catch(Exception e) {
-			  logger.info(e.toString()); 
-		  }
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> list = bindingResult.getAllErrors();
+			for(ObjectError e : list) {
+				logger.info(e.getDefaultMessage());
+			}
+		}else {
+			try { 
+			      RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
+				  
+				  HttpHeaders header = kakaoApiSetting.headerSet();
+	
+				  //HttpEntity는 Http프로토콜을 이용하는 통신의  header와 body관련 정보를 저장할 수 있게끔 함.
+				  //RequestBody로 데이터를 전달하는 HTTP.POST의 경우 VO 그대로 데이터 전달 가능
+				  HttpEntity<?> entity = new HttpEntity<>(header);
+				  
+				  //create(String) : URI 객체 생성함
+				  URI uri = URI.create(templateUri+"/"+clientId+"?"+"template_code="+template_code+"&"+"status="+status);
+				  logger.info(uri.toString());
+				    
+				  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
+				  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
+				  jsonInString = jsonObj.toString(); 
+				  a = response.getBody().toString();
+				  logger.info(a);
+			  }catch(HttpClientErrorException|HttpServerErrorException e) {
+				  logger.info(e.toString()); 
+			  }catch(Exception e) {
+				  logger.info(e.toString()); 
+			  }
+		}
 		return jsonInString;
 	}
 	
 
 	//발신번호 인증/등록
 	@PostMapping(value="/authentication")
-	public String phoneNumberAuthenticate(@RequestBody AuthenticationVO authenticationVO) {
+	public String phoneNumberAuthenticate(@RequestBody @Valid AuthenticationVO authenticationVO, BindingResult bindingResult) {
 		logger.info(authenticationVO.getComment());
 		String sendNumberSaveUri = kakaoConfig.getSendNumberSaveUri();
 		String jsonInString = "";
 		String clientId = kakaoConfig.getClientId();
 		logger.info(authenticationVO.getSendNumber());
-		try { 
-			 Gson gson = new Gson();
-			  String mappedValue = gson.toJson(authenticationVO);
-			  logger.info("String mapper"+mappedValue);
-			  
-			  KakaoAuthenticationVO kakaoAuthenticationVO = gson.fromJson(mappedValue, KakaoAuthenticationVO.class);
-			  logger.info("카카오 전체:"+kakaoAuthenticationVO.toString());
-			  
-			  ObjectMapper mapper = new ObjectMapper();
-			  String jobj = mapper.writeValueAsString(kakaoAuthenticationVO);
-			  Map<String,String> map = mapper.readValue(jobj, Map.class);
-			  
-			  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
-			  
-			  HttpHeaders header = kakaoApiSetting.headerSet();
-			    
-			  //HttpEntity는 Http프로토콜을 이용하는 통신의  header와 body관련 정보를 저장할 수 있게끔 함.
 
-			  HttpEntity<KakaoAuthenticationVO> entity = new HttpEntity<>(kakaoAuthenticationVO,header);
-			  
-			  //create(String) : URI 객체 생성함
-			  URI uri = URI.create(sendNumberSaveUri+"/"+clientId);
-			  
-			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.POST, entity, String.class);
-			  
-			  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
-			  jsonInString = jsonObj.toString(); 
-		  }catch(HttpClientErrorException|HttpServerErrorException e) {
-			  logger.info(e.toString()); 
-		  }catch(Exception e) {
-			  logger.info(e.toString()); 
-		  }
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> list = bindingResult.getAllErrors();
+			for(ObjectError e : list) {
+				logger.info(e.getDefaultMessage());
+			}
+		}else {
+			try { 
+				  Gson gson = new Gson();
+				  String mappedValue = gson.toJson(authenticationVO);
+				  logger.info("String mapper"+mappedValue);
+				  
+				  KakaoAuthenticationVO kakaoAuthenticationVO = gson.fromJson(mappedValue, KakaoAuthenticationVO.class);
+				  logger.info("카카오 전체:"+kakaoAuthenticationVO.toString());
+				  
+				  ObjectMapper mapper = new ObjectMapper();
+				  String jobj = mapper.writeValueAsString(kakaoAuthenticationVO);
+				  Map<String,String> map = mapper.readValue(jobj, Map.class);
+				  
+				  RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
+				  
+				  HttpHeaders header = kakaoApiSetting.headerSet();
+				    
+				  //HttpEntity는 Http프로토콜을 이용하는 통신의  header와 body관련 정보를 저장할 수 있게끔 함.
+	
+				  HttpEntity<KakaoAuthenticationVO> entity = new HttpEntity<>(kakaoAuthenticationVO,header);
+				  
+				  //create(String) : URI 객체 생성함
+				  URI uri = URI.create(sendNumberSaveUri+"/"+clientId);
+				  
+				  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.POST, entity, String.class);
+				  
+				  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
+				  jsonInString = jsonObj.toString(); 
+			  }catch(HttpClientErrorException|HttpServerErrorException e) {
+				  logger.info(e.toString()); 
+			  }catch(Exception e) {
+				  logger.info(e.toString()); 
+			  }
+		}
 		return jsonInString;
 	}
 	
