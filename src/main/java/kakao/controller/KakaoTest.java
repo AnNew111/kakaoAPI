@@ -1,12 +1,17 @@
 package kakao.controller;
 
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.validation.Valid;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.slf4j.Logger;
@@ -34,6 +39,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 
 import kakao.KakaoApiSettng;
 import kakao.KakaoConfig;
@@ -46,12 +52,14 @@ import kakao.vo.KakaoSendMsgVO;
 import kakao.vo.ReportVO;
 import kakao.vo.SendMsgVO;
 import kakao.vo.TemplateVO;
+import lombok.var;
 
 
 @RestController
 @RequestMapping(value="/kakaoapi")
 public class KakaoTest {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	private static Map<String, String> msgList = new HashMap<String, String>();
 	
 	@Autowired
 	KakaoApiSettng kakaoApiSetting;
@@ -67,20 +75,48 @@ public class KakaoTest {
 	//카카오 알림톡 전송
 	@PostMapping(value = "/kakaoSendMsg")
 	public String  kakaotalkSend(@RequestBody @Valid SendMsgVO sendVO ,BindingResult bindingResult) {
-		
-		String jsonInString = "";
+		String jsonInString = "a";
 		String sendMsgUri = kakaoConfig.getSendMsgUri();
 		String clientId = kakaoConfig.getClientId();
+		logger.info(msgList.toString());
 		
+		String templateCode = sendVO.getK().get(0).getTemplateCode();
+		logger.info(templateCode);
+		String aa = sendVO.getM().get("time");
+		String bb = Integer.toString(sendVO.getM().size());
+		logger.info("시간"+bb);
+		logger.info("맵 변수 개수"+aa);
+
 		if(bindingResult.hasErrors()) {
 			List<ObjectError> list = bindingResult.getAllErrors();
 			for(ObjectError e : list) {
 				logger.info(e.getDefaultMessage());
 			}
-		}else {
-			try { 
+		}else if(!msgList.containsKey(templateCode)) {
+			return "템플릿 코드 "+ templateCode+"을 조회해 주새요" ;
+		}else if(!msgList.get(templateCode).equals(bb)) {
+			return "템플릿 코드 "+templateCode+"의 메세지에 포함된 변수의 개수 : "+msgList.get(templateCode)+"\r\n 입력한 변수의 개수 : "+bb;
+		}
+		else if(sendVO.getK().get(0).getPhone().equals("01040392705")){
+			jsonInString = "b";
+			 	try {
+			 	  List<String> key = new ArrayList<String>(sendVO.getM().keySet());
+			 	  for(int i = 0; i<key.size();i++) {
+			 	  	logger.info(key.get(i));
+			 	  }
+			 	
+			 	  StringBuffer msgInVar = new StringBuffer(sendVO.getK().get(0).getMsg());
+			 	  int count = 0;
+			 	  for(int i = 0; (count=msgInVar.indexOf("#", count))>=0;i++) {
+			 		  int end = count+3+key.get(i).length();
+			 		  msgInVar.replace(count, end, sendVO.getM().get(key.get(i)));
+			 		  logger.info("key"+sendVO.getM().get(key.get(i)));
+			 	  }
+			 	  logger.info("value ="+sendVO.getM().get(key.get(2)));
+			 	  logger.info(msgInVar.toString());
+			 	  sendVO.getK().get(0).setMsg(msgInVar.toString());
 				  Gson gson = new Gson();
-				  String mappedValue = gson.toJson(sendVO);
+				  String mappedValue = gson.toJson(sendVO.getK().get(0));
 				  logger.info("String mapper"+mappedValue);
 				  
 				  KakaoSendMsgVO kakaoSendMsgVO = gson.fromJson(mappedValue, KakaoSendMsgVO.class);
@@ -105,12 +141,12 @@ public class KakaoTest {
 				  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
 				  
 				  jsonInString = jsonObj.toString();
-				  logger.info("cmid="+jsonObj.get("cmid")); 
+				  logger.info("cmid="+jsonObj.get("cmid"));
 			  }catch(HttpClientErrorException|HttpServerErrorException e) {
 				  logger.info(e.toString()); 
 			  }catch(Exception e) {
 				  logger.info(e.toString()); 
-			  }  
+			  }
 		}
 		return jsonInString;	
 	}
@@ -149,14 +185,22 @@ public class KakaoTest {
 					  break;
 				  }
 			  }
-			  
-//			  String descriptionB = ReportMsgRsltCode.valueOf(msgRslt).getValue().toString();
+			  String msgRslt = jsonObj.get("msg_rslt").toString();
+			  logger.info(msgRslt);
+			  String descriptionB = "";
+			  for(ReportMsgRsltCode reportMsgRsltCode : ReportMsgRsltCode.values()) {
+				  if(rslt.equals(reportMsgRsltCode.getCode())){
+					  descriptionB = ReportMsgRsltCode.valueOf(reportMsgRsltCode.toString()).getValue().toString();
+					  break;
+				  }
+			  }
+			
 			  logger.info(descriptionA);
 			 
 			  jsonObj.remove("RSLT");
 			  jsonObj.put("RSLT",descriptionA);  
-//			  jsonObj.remove("msg_rslt");
-//			  jsonObj.put("msg_rslt",descriptionB);
+			  jsonObj.remove("msg_rslt");
+			  jsonObj.put("msg_rslt",descriptionB);
 			  
 			  jsonInString = jsonObj.toString();
 		  }catch(HttpClientErrorException|HttpServerErrorException e) {
@@ -178,8 +222,10 @@ public class KakaoTest {
 		String jsonInString = "";
 		String templateUri = kakaoConfig.getTemplateUri();
 		String clientId = kakaoConfig.getClientId();
-		String a = "";
-
+		String msgCount = "";
+		String resTemplateCode = "";
+		String resMsg = "";
+		
 		if(bindingResult.hasErrors()) {
 			List<ObjectError> list = bindingResult.getAllErrors();
 			for(ObjectError e : list) {
@@ -187,6 +233,7 @@ public class KakaoTest {
 			}
 		}else {
 			try { 
+				  
 			      RestTemplate restTemplate = kakaoApiSetting.restTemplateSet();
 				  
 				  HttpHeaders header = kakaoApiSetting.headerSet();
@@ -201,9 +248,32 @@ public class KakaoTest {
 				    
 				  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 				  JSONObject jsonObj = kakaoApiSetting.jsonParser(response);
+			
+				  logger.info(jsonObj.get("templateList").toString());
+				  JSONParser parser = new JSONParser();
+				  JSONObject templateList = (JSONObject)parser.parse(jsonObj.toString());
+				  JSONArray arr = (JSONArray)templateList.get("templateList");
+				  JSONObject tmp = (JSONObject)arr.get(0);
+				  resTemplateCode = tmp.get("template_code").toString();
+				  resMsg = tmp.get("template_msg").toString();
+				  logger.info(resMsg+"  "+resTemplateCode);
+				  int count = 0;
+				  int index = -1;
+				  do {
+					  if((index = resMsg.indexOf("#",index+1))>=0) {
+						  count++;
+						 msgCount= Integer.toString(count);
+						 logger.info(msgCount);
+					  }
+				  }while(!(index==-1));
+				  msgList.put(resTemplateCode,msgCount);
+				  logger.info(msgList.toString());
+				  jsonObj.put(resTemplateCode,"변수개수"+ msgCount);
 				  jsonInString = jsonObj.toString(); 
-				  a = response.getBody().toString();
-				  logger.info(a);
+					
+				 // String result = kakaoMsgInfo.setMsg(resTemplateCode, msgCount);
+				  //logger.info(result);
+				  
 			  }catch(HttpClientErrorException|HttpServerErrorException e) {
 				  logger.info(e.toString()); 
 			  }catch(Exception e) {
@@ -282,7 +352,7 @@ public class KakaoTest {
 			  HttpEntity<?> entity = new HttpEntity<>(header);
 			  
 			  //create(String) : URI 객체 생성함
-			  URI uri = URI.create(sendNumberListUri+"/"+clientId+"?"+"sendnumber="+sendnumber);
+			  URI uri = URI.create(sendNumberListUri+"/"+clientId);
 			  
 			  ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 			  

@@ -17,5 +17,6 @@ public class TemplateVO {
 	@NotNull(message = "status는 Null값이 올 수 없습니다.")
 	@Pattern(regexp = "^([1-5])$")
 	private String status;
+
 	
 }
